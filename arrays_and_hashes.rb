@@ -28,7 +28,7 @@ print "question 8 #{stops}"
 # 10. Print out all the stops using a for loop
 
 for train_station in stops
-  p train_station
+  p train_stations
 end
 ## B. Given the following data structure:
 
