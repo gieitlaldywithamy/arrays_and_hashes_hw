@@ -1,100 +1,54 @@
+require 'ap' #added a package to alleviate the pain of trying to read console output
 stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 
 # 1. Add `"Edinburgh Waverley"` to the end of the array
+
 p "Question 1", stops.push("Edinburgh Waverley")
+
+# p stops << "Edinburgh Waverley"
+
 # 2. Add `"Glasgow Queen St"` to the start of the array
+
 p stops.unshift("Glasgow Queen St")
+ap stops
+
 # 3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
 p "Question 3", stops.insert(4, "Polmont")
 
-def get_index_by_name(train_stations,station_name)
-  return train_stations.index(station_name)
-end
+# 4. Work out the index position of "Linlithgow"
+# def get_index_by_name(train_stations,station_name)
+#   return train_stations.index(station_name)
+# end
+#
+# p "Index of Linlithgow:  #{get_index_by_name(stops, 'Linlithgow')}"
+p "Index of Linlithgow #{stops.index("Linlithgow")}"
 
-p "Index of Linlithgow:  #{get_index_by_name(stops, 'Linlithgow')}"
+# 5. Remove Livingston from the array using its name
+
 stops.delete("Livingston")
-p "Post deleting Livingston "
-p stops
-p "Question 6, #{stops}"
+ap stops
+#p "Question 6, #{stops}"
 
 # 6. Delete `"Cumbernauld"` from the array by index
-stops.delete(2)
+stops.delete_at(2)
+ap stops
 # 7. How many stops there are in the array?
-print "There are #{stops.length} in the array"
+p "There are #{stops.length} in the array"
 # 8. How many ways can we return `"Falkirk High"` from the array?
-print "question 8 #{stops}"
+p stops[2]
+p stops[-5]
+p stops.slice(2)
 
 # 9. Reverse the positions of the stops in the array
+ap stops.reverse()
 # 10. Print out all the stops using a for loop
 
 for train_station in stops
-  p train_stations
+  p train_station
 end
 ## B. Given the following data structure:
+#in hash_manipulation.rb
 
-  users = {
-    "Jonathan" => {
-      :twitter => "jonnyt",
-      :favourite_numbers => [12, 42, 75, 12, 5],
-      :home_town => "Stirling",
-      :pets => {
-        "fluffy" => :cat,
-        "fido" => :dog,
-        "spike" => :dog
-      }
-    },
-    "Erik" => {
-      :twitter => "eriksf",
-      :favourite_numbers => [8, 12, 24],
-      :home_town => "Linlithgow",
-      :pets => {
-        "nemo" => :fish,
-        "kevin" => :fish,
-        "spike" => :dog,
-        "rupert" => :parrot
-      }
-    },
-    "Avril" => {
-      :twitter => "bridgpally",
-      :favourite_numbers => [12, 14, 85, 88],
-      :home_town => "Dunbar",
-      :pets => {
-        "colin" => :snake
-      }
-    },
-  }
-
-# 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# 2. Get Erik's hometown
-# 3. Get the array of Erik's favourite numbers
-# 4. Get the type of Avril's pet Colin
-# 5. Get the smallest of Erik's favourite numbers
-# 6. Add the number `7` to Erik's favourite numbers
-# 7. Change Erik's hometown to Edinburgh
-# 8. Add a pet dog to Erik called "Fluffy"
-# 9. Add yourself to the users hash
 
 # C. Given the following data structure:
-
-
-united_kingdom = [
-  {
-    name: "Scotland",
-    population: 5295000,
-    capital: "Edinburgh"
-  }, {
-    name: "Wales",
-    population: 3063000,
-    capital: "Swansea"
-  }, {
-    name: "England",
-    population: 53010000,
-    capital: "London"
-  }
-]
-
-
-# 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
-# 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
-# 3. Use a loop to print the names of all the countries in the UK.
-# 4. Use a loop to find the total population of the UK.
+#in loops.md

@@ -1,5 +1,5 @@
 # C. Given the following data structure:
-require 'ap'
+require 'ap' #used additional package for nested hash and array printing
 
 united_kingdom = [
   {

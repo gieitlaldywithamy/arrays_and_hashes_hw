@@ -48,6 +48,7 @@ for number in eriks_favourite_numbers
 end
 p eriks_favourite_smallest_number
 #p users["Erik"][:favourite_numbers][0]
+p users["Erik"][:favourite_numbers].sort().first
 # 6. Add the number `7` to Erik's favourite numbers
 users["Erik"][:favourite_numbers] << 7
 p users["Erik"]
