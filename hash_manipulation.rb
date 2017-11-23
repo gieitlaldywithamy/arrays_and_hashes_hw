@@ -37,9 +37,10 @@ p users["Erik"][:home_town]
 # 3. Get the array of Erik's favourite numbers
 p users["Erik"][:favourite_numbers]
 # 4. Get the type of Avril's pet Colin
-p users["Avril"][:pets]["colin"]
+p users["Avril"][:pets]["colin"].to_s()
 # 5. Get the smallest of Erik's favourite numbers
 eriks_favourite_smallest_number = users["Erik"][:favourite_numbers].first()
+p users["Erik"][:favourite_numbers].min()
 eriks_favourite_numbers = users["Erik"][:favourite_numbers]
 for number in eriks_favourite_numbers
   if number < eriks_favourite_smallest_number
@@ -70,4 +71,9 @@ users["Amy"] = {
     "simba" => "cat"
   }
   }
+
+  #if you are creating a new item for the hash and have no entry for a key
+  #, leave it empty or assigned to null
+
+  #use new_user and after, users["Amy"] = new_user
 p users["Amy"]

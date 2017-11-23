@@ -25,6 +25,8 @@ for country in united_kingdom
   end
 end
 
+#united_kingdom[1][:capital] = "Cardiff"
+
 ap united_kingdom
 
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).

@@ -34,11 +34,19 @@ stops.delete_at(2)
 ap stops
 # 7. How many stops there are in the array?
 p "There are #{stops.length} in the array"
+p stops.length
+p stops.count
+p stops.size
 # 8. How many ways can we return `"Falkirk High"` from the array?
 p stops[2]
 p stops[-5]
 p stops.slice(2)
+p stops.fetch(2)
 
+
+# p stops.select({|station| station == "Falkirk High"})
+ap stops
+#p stops.delete('Livingston')
 # 9. Reverse the positions of the stops in the array
 ap stops.reverse()
 # 10. Print out all the stops using a for loop
